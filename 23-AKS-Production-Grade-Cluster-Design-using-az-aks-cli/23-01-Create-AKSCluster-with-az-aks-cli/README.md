@@ -79,10 +79,10 @@ AKS_AD_AKSADMIN_GROUP_ID=$(az ad group create --display-name aksadmins --mail-ni
 echo $AKS_AD_AKSADMIN_GROUP_ID
 
 # Create Azure AD AKS Admin User 
-# Replace with your AD Domain - aksadmin1@stacksimplifygmail.onmicrosoft.com
+# Replace with your AD Domain - Pankaj21789gmail.onmicrosoft.com
 AKS_AD_AKSADMIN1_USER_OBJECT_ID=$(az ad user create \
   --display-name "AKS Admin1" \
-  --user-principal-name aksadmin1@stacksimplifygmail.onmicrosoft.com \
+  --user-principal-name Pankaj21789gmail.onmicrosoft.com \
   --password @AKSDemo123 \
   --query objectId -o tsv)
 echo $AKS_AD_AKSADMIN1_USER_OBJECT_ID
@@ -91,7 +91,7 @@ echo $AKS_AD_AKSADMIN1_USER_OBJECT_ID
 az ad group member add --group aksadmins --member-id $AKS_AD_AKSADMIN1_USER_OBJECT_ID
 
 # Make a note of Username and Password
-Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+Username: aksadmin1@Pankaj21789gmail.onmicrosoft.com
 Password: @AKSDemo123
 ```
 
@@ -200,7 +200,7 @@ az aks get-credentials --name ${AKS_CLUSTER}  --resource-group ${AKS_RESOURCE_GR
 kubectl get nodes
 URL: https://microsoft.com/devicelogin
 Code: HL724557M
-Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+Username: aksadmin1@Pankaj21789gmail.onmicrosoft.com
 Password: @AKSDemo123
 
 # Cluster Info
